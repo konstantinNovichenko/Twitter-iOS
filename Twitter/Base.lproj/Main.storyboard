@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="X0U-Au-Zvf">
             <objects>
-                <tableViewController id="xZb-lY-9xH" sceneMemberID="viewController">
+                <tableViewController id="xZb-lY-9xH" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HkN-Tb-pAJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,14 @@
                             <outlet property="delegate" destination="xZb-lY-9xH" id="gh2-P9-IfN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Z4A-oF-qZg"/>
+                    <navigationItem key="navigationItem" title="Home" id="Z4A-oF-qZg">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="QLg-ra-MX3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="xZb-lY-9xH" id="QcU-RR-Sy4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMV-fc-gpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,6 +53,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="17V-Ql-Ytd">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.43850014669999998" green="0.73552496209999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="xZb-lY-9xH" kind="relationship" relationship="rootViewController" id="VA6-41-hG7"/>
