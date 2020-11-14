@@ -14,7 +14,9 @@ class HomeTableViewController: UITableViewController {
     var tweetArray = [NSDictionary]()
     var numberOfTweets: Int!
     
-    @IBOutlet var tweetTable: UITableView!
+    @IBOutlet var tweetTable: UITableView!    
+    @IBOutlet weak var accountBarButton: UIBarButtonItem!
+    
     let myRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -31,8 +33,26 @@ class HomeTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.loadTweets()
+        //self.loadUserData()
     }
     
+    
+    @objc func loadUserData(){
+        
+        
+        
+        TwitterAPICaller.client?.getUserRequest(success: { (users: [NSDictionary]) in
+            
+            for user in users {
+                print(user)
+            }
+            
+
+        }, failure: { (Error) in
+            print("Could not retrieve users!")
+        })
+        
+    }
     
     @objc func loadTweets(){
         

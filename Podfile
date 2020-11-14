@@ -9,4 +9,5 @@ target 'Twitter' do
   pod 'BDBOAuth1Manager'
   pod 'Alamofire', '~> 4.4'
   pod 'AlamofireImage'
+  pod 'RSKPlaceholderTextView'
 end

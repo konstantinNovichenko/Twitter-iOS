@@ -27,12 +27,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/280" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-gO-Av9">
+                                <rect key="frame" x="279" y="200" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="dkl-bF-bl4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0w3-UE-qkF" firstAttribute="leading" secondItem="YHC-Vm-m9J" secondAttribute="leading" id="HcA-p5-Ody"/>
                             <constraint firstItem="YHC-Vm-m9J" firstAttribute="trailing" secondItem="0w3-UE-qkF" secondAttribute="trailing" id="Ulk-ce-GzL"/>
                             <constraint firstItem="0w3-UE-qkF" firstAttribute="top" secondItem="YHC-Vm-m9J" secondAttribute="top" id="hLC-aC-QmU"/>
+                            <constraint firstItem="YHC-Vm-m9J" firstAttribute="trailing" secondItem="Ere-gO-Av9" secondAttribute="trailing" constant="16" id="jgy-Qj-uq2"/>
+                            <constraint firstItem="Ere-gO-Av9" firstAttribute="top" secondItem="0w3-UE-qkF" secondAttribute="bottom" constant="8" id="rpp-SR-PlV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YHC-Vm-m9J"/>
                     </view>
@@ -51,6 +62,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="characterCounterLabel" destination="Ere-gO-Av9" id="0ZK-pd-d9S"/>
                         <outlet property="tweetTextView" destination="0w3-UE-qkF" id="dKT-jd-1dL"/>
                     </connections>
                 </viewController>
@@ -165,6 +177,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="accountBarButton" destination="QLg-ra-MX3" id="0xk-gm-dAE"/>
                         <outlet property="tweetTable" destination="HkN-Tb-pAJ" id="9xz-cK-r1D"/>
                     </connections>
                 </tableViewController>

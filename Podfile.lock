@@ -19,12 +19,14 @@ PODS:
     - Alamofire (~> 4.8)
   - BDBOAuth1Manager (2.0.0):
     - AFNetworking/NSURLSession (~> 3.0.0)
+  - RSKPlaceholderTextView (6.0.3)
 
 DEPENDENCIES:
   - AFNetworking
   - Alamofire (~> 4.4)
   - AlamofireImage
   - BDBOAuth1Manager
+  - RSKPlaceholderTextView
 
 SPEC REPOS:
   trunk:
@@ -32,13 +34,15 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - BDBOAuth1Manager
+    - RSKPlaceholderTextView
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   BDBOAuth1Manager: 92d17d06f8a648602962304cd2f35ae7394fa001
+  RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
 
-PODFILE CHECKSUM: f9c6b25b57b4e78288a17529ce35fe4a762146da
+PODFILE CHECKSUM: c4af924b2ebe459f1c64807311b755461a30d0b2
 
 COCOAPODS: 1.9.3
